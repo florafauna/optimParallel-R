@@ -1,4 +1,8 @@
 - version 1.0-2:
+Author: Florian Gerber <flora.fauna.gerber@gmail.com>
+Date:   Wed Feb 10 11:46:16 2021 -0700
+(1) migrate git repo to github.com
+(1) change maintainer email address
 
 - version 1.0-1: 
 commit 6f389aa916dc8cbc2398b2ed3635713a4ecf1778
