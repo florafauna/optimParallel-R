@@ -1,0 +1,15 @@
+# setup R devel docker file
+
+    docker build -t flora/rdevel -f Dockerfile .
+    docker run -it -d flora/rdevel bin/bash
+
+    docker ps -a
+
+## copy tar/ folder to docker container
+
+    docker cp tar/ CONTAINER_ID:/
+
+## run devel tests here	
+
+    docker exec -it CONTAINER_ID /bin/bash
+
