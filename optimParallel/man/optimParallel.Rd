@@ -2,7 +2,6 @@
 % Please edit documentation in R/optimParallel.R
 \docType{package}
 \name{optimParallel}
-\alias{optimParallel}
 \alias{optimparallel}
 \alias{optimParallel-package}
 \alias{optimParallel-Package}
@@ -10,6 +9,7 @@
 \alias{OptimParallel-Package}
 \alias{optimparallel-package}
 \alias{optimparallel-Package}
+\alias{optimParallel}
 \title{parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}}
 \usage{
 optimParallel(
@@ -62,6 +62,8 @@ If \code{parallel=list(loginfo=TRUE)}, additional log information containing the
 the return values of \code{fn} and \code{gr} is returned.
 }
 \description{
+Provides a parallel version of the L-BFGS-B method of optim(). The main function of the package is optimParallel(), which has the same usage and output as optim(). Using optimParallel() can significantly reduce the optimization time.
+
 The function provides a parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}.
 If the evaluation time of the objective function \code{fn} is more than 0.1 sceconds, \code{optimParallel} can significantly reduce the optimization time. 
 For a \eqn{p}-parameter optimization the speed increase is about factor \eqn{1+2p} when no analytic gradient is specified and \eqn{1+2p} processor cores are available.
@@ -177,6 +179,13 @@ The R Journal, 11(1):352-358, https://doi.org/10.32614/RJ-2019-030
 Also available as vignette of this package \code{vignette("optimParallel")}.
 }
 \seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/florafauna/optimParallel-R}
+  \item Report bugs at \url{https://github.com/florafauna/optimParallel-R/issues}
+}
+
+
 \code{\link[stats]{optim}},
 \code{\link[parallel]{makeCluster}},
 \code{\link[parallel]{setDefaultCluster}},
@@ -184,6 +193,6 @@ Also available as vignette of this package \code{vignette("optimParallel")}.
 \code{\link[parallel]{detectCores}}.
 }
 \author{
-Florian Gerber, \email{flora.fauna.gerber@gmail.com}, \url{https://user.math.uzh.ch/gerber}.
+Florian Gerber, \email{flora.fauna.gerber@gmail.com}, \url{https://user.math.uzh.ch/gerber/}.
 }
-\keyword{package}
+\keyword{internal}

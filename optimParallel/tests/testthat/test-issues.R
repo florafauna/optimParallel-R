@@ -7,7 +7,7 @@ context("test-issues")
 
 control <- structure(list(maxit = 10,
                           factr = 2.22044604925031e-16),
-                     .Names = c("maxit","factr"))
+                     names = c("maxit","factr"))
 
 FN1 <- function(par, sleep){
     Sys.sleep(sleep)

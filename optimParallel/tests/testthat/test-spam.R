@@ -6,7 +6,7 @@ context("test-spam")
 
 control <- structure(list(maxit = 10,
                           factr = 1e+09),
-                     .Names = c("maxit","factr"))
+                     names = c("maxit","factr"))
 
 
 test_that("optimParallel - mle.spam",{

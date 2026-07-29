@@ -1,8 +1,11 @@
 #' @name optimParallel
 #' @aliases optimparallel optimParallel-package optimParallel-Package OptimParallel-package OptimParallel-Package optimparallel-package optimparallel-Package 
-#' @author Florian Gerber, \email{flora.fauna.gerber@@gmail.com}, \url{https://user.math.uzh.ch/gerber}.
+#' @author Florian Gerber, \email{flora.fauna.gerber@@gmail.com}, \url{https://user.math.uzh.ch/gerber/}.
 #' @title parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}
-#' @keywords package
+#' @aliases optimParallel-package NULL
+#' @aliases optimParallel optimparallel optimParallel-Package OptimParallel-package OptimParallel-Package optimparallel-package optimparallel-Package
+#' @keywords internal
+"_PACKAGE"
 #' @docType package
 #' @description
 #' The function provides a parallel version of the L-BFGS-B method of \code{\link[stats]{optim}}.
