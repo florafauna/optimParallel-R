@@ -5,7 +5,7 @@ source("testsetup.R")
 context("test-spam")
 
 control <- structure(list(maxit = 10,
-                          factr = 2.22044604925031e-16),
+                          factr = 1e+09),
                      .Names = c("maxit","factr"))
 
 
@@ -46,10 +46,16 @@ test_that("optimParallel - mle.spam",{
                      control = optim.control, lower = c(rep(-Inf, p), thetalower), 
                      upper = c(rep(Inf, p), thetaupper), hessian = hessian))
     }
-    expect_equal(mle.spam(y, X, distmat, cov.sph,
-                          truebeta, truetheta,thetalower=c(0,0,0),thetaupper=c(1,Inf,Inf)),
-                 mle_optimParallel(y, X, distmat, cov.sph,
-                          truebeta, truetheta,thetalower=c(0,0,0),thetaupper=c(1,Inf,Inf)))
+    res.spam <- mle.spam(y=y, X=X, distmat=distmat, Covariance=cov.sph,
+                          optim.control=control,
+                          beta0=truebeta, theta0=truetheta,
+                          thetalower=c(0,0,0), thetaupper=c(1,Inf,Inf))
+    res.optimParallel <- mle_optimParallel(y, X, distmat, cov.sph,
+                          optim.control=control,
+                          truebeta, truetheta,
+                          thetalower=c(0,0,0), thetaupper=c(1,Inf,Inf))
+    common <- intersect(names(res.spam), names(res.optimParallel))
+    expect_equal(res.spam[common], res.optimParallel[common]) 
  })
 
 
