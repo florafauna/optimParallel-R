@@ -1,6 +1,6 @@
 include Makefile.defs
 
-VERSION := 1.0-2
+VERSION := 1.0-3
 TAR = optimParallel_$(VERSION).tar.gz
 
 
